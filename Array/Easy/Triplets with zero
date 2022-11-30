@@ -1,0 +1,37 @@
+//triplets with zero
+//Check whether it contains a triplet that sums up to zero. 
+
+//Input: n = 5, arr[] = {0, -1, 2, -3, 1}
+//Output: 1
+//Explanation: 0, -1 and 1 forms a triplet
+//with sum equal to 0.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+      cin>>arr[i];  
+    }
+    int ans;
+    for(int i=0;i<n-2;i++)
+    {
+        for(int j=i+1;j<n-1;j++)
+        {
+            for(int k=j+1;k<n;k++)
+            {
+                int sum = arr[i]+arr[j]+arr[k];
+                if(sum==0)
+                {
+                  ans=1;
+                }
+            }
+        }
+    }
+    cout<<ans<<endl;
+    return 0;
+}
