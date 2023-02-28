@@ -59,13 +59,21 @@ class Solution {
 
 
 another way: using java
- int i=0;
+      
         int len=s.length();
        int sum=0;
-       for( i=0;i<len;i++)
+       for( int i=0;i<len;i++)
        {
            sum+= t.charAt(i)- s.charAt(i);
        
        }
        sum+= t.charAt(i);
        return (char)sum;
+
+
+
+
+//https://www.youtube.com/watch?v=ejSJDr57bTk&ab_channel=ProgrammingTutorials
+
+
+another approach: property of ZOR
