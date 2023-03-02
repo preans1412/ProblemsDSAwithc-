@@ -29,6 +29,12 @@ what if size of string j is smaller than size of string i, in that case, we will
 
 
 2ND METHOD:
+The code below is very much self explanatory.
+
+We first sort the array of strings.
+Then, we choose the first and last string in the array. [They are supposed to be the most different among all the pairs of strings in the sorted array]
+We just compare how many common characters match from index i = 0 of these two strings
+
 
 class Solution {
 public:
@@ -66,3 +72,26 @@ That way it will only take O(mn).
 
 
 3RD METHOD:
+
+class Solution {
+public:
+    string longestCommonPrefix(vector<string>& strs){
+        int n =strs.size();
+        string ans; 
+        sort(strs.begin(), strs.end());
+        string a = strs[0];
+        string b = strs[n-1];
+        for(int i =0; i< a.size(); i++){
+            if(a[i] == b[i]){
+                ans += a[i];
+            }else break;
+        }
+        return ans;
+    }
+};
+
+
+Wouldn't the time complexity be O((n*logn)*m) as sorting in string will take total (nlogn) time and the length of whole vector is 'm'.
+
+For those who didn't understand: We need to find the longest string common to all elements of the array of strings.
+So, the shortest string can be the only longest common string common to all the elements Read that again!
