@@ -1,4 +1,8 @@
 // USING RECURSION
+// Time complexity: O(N)
+// Space complexity: O(N) Recursive stack space
+//  we have to Invert the binary tree.  So we use Post Order Treversal in which first we go in Left subtree and then in Right subtree then we return back to Parent node.When we come back to the parent node we swap it's Left subtree and Right subtree.
+
 
 class Solution {
 public:
@@ -14,5 +18,17 @@ public:
        root->left=root->right;
        root->right=temp;
        return root;
+    }
+};
+
+
+//Easy 2 lines recursive solution
+
+class Solution {
+public:
+    TreeNode* invertTree(TreeNode* root) {
+       
+        TreeNode* temp;
+        return root ? (temp = invertTree(root->left), root->left = invertTree(root->right), root->right = temp, root) : root;
     }
 };
