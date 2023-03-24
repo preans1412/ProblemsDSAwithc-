@@ -1,13 +1,6 @@
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
+///***     c++   ***////
+
+
 class Solution {
 public:
     ListNode* reverseList(ListNode* head)
@@ -29,16 +22,11 @@ public:
 };
 
 
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
+
+
+//***   JAVA ***///
+
+
 class Solution {
     public ListNode reverseList(ListNode head) 
     {
@@ -59,3 +47,10 @@ class Solution {
        return p;
     }
 }
+
+
+
+///***     PYTHON     ***////
+
+
+
