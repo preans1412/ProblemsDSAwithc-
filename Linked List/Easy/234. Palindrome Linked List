@@ -1,0 +1,54 @@
+
+
+
+boolean palindrome(node head)
+{
+if(head==null)
+return true;
+node mid= middle(head);
+node last = reverse(mid.next);
+node cur= head;
+while(last!=null){
+if(last.data! = cur.data)
+ return false;
+last = last.next;
+cur= cur.next;
+
+}
+return true;
+}
+
+
+
+
+
+
+One other Simple Approach which also doesnt modify original linkedlist.
+
+var isPalindrome = function(head) {
+//putting it in the stack
+//taking it back and comparing the values
+//O(2n)
+const stack = [];
+let ll = head;
+while(ll) {
+stack.push(ll.val);
+ll = ll.next;
+}
+ll = head;
+while(ll) {
+if(stack.pop() !== ll.val) {
+return false;
+}
+ll = ll.next;
+}
+return true;
+};
+
+0
+
+
+
+
+
+
