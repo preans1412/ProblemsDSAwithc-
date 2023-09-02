@@ -1,0 +1,23 @@
+//https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+
+
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) 
+    {
+           // in-place means that operates directly on the input data structure without requiring extra space proportional to the input size.
+
+           int i=0;
+       for(int j=1;j<nums.size();j++)
+       { 
+           if(nums[j]!=nums[i])
+           {
+                 i++;
+               nums[i]=nums[j];
+             
+           }   
+       }
+       return i+1;
+    }
+};
+
